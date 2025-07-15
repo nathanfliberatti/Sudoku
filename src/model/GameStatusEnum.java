@@ -2,10 +2,17 @@ package model;
 
 public enum GameStatusEnum {
 
-    NON_STARTED,
+    NON_STARTED("Não iniciado"),
+    INCOMPLETE("Incompleto"),
+    COMPLETE("Completo");
 
-    INCOMPLETE,
+    private String label;
 
-    COMPLETE;
+    GameStatusEnum(final String label) {
+        this.label = label;
+    }
 
+    public String getLabel() {
+        return label;
+    }
 }
